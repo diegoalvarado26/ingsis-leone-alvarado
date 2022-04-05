@@ -38,5 +38,9 @@ public class Lexer {
         return tokens;
     }
 
+    private boolean isInvalidWithNextChar(String currentChar, String firstChar, String secondChar){
+        return false;
+    }
+
 }
 

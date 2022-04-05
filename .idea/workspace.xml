@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="first commit with java">
+    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="commited with the changes made with Mati's help">
       <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +255,7 @@
       <workItem from="1649115950785" duration="47000" />
       <workItem from="1649116015222" duration="3918000" />
       <workItem from="1649182732890" duration="2482000" />
-      <workItem from="1649185237022" duration="5496000" />
+      <workItem from="1649185237022" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="first commit with java">
       <created>1649115347164</created>
@@ -281,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649186966733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commited with the changes made with Mati's help">
+      <created>1649191960452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649191960452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +304,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit with java" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit with java" />
+    <MESSAGE value="commited with the changes made with Mati's help" />
+    <option name="LAST_COMMIT_MESSAGE" value="commited with the changes made with Mati's help" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
