@@ -58,4 +58,24 @@ public class LexerTest {
 
         assertArrayEquals(output.toArray(), result.toArray());
     }
+    @Test
+    public void test05(){
+        String input = "const";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.CONST, "const", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test06(){
+        String input = "Mati";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.IDENTIFIER, "Mati", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
 }

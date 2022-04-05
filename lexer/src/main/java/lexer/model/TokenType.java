@@ -1,31 +1,59 @@
 package lexer.model;
 
+
 public enum TokenType {
-        MINUS("-"),
-        PLUS("+");
-        private final String rep;
+        MINUS(new Checker() {
+                @Override
+                public boolean check(String string) {
+                        return string.equals("-");
+                }
+        }),
+        PLUS(new Checker() {
+                @Override
+                public boolean check(String string) {
+                        return string.equals("+");
+                }
+        }),
+        CONST(new Checker() {
+                @Override
+                public boolean check(String string) {
+                        return string.equals("const");
+                }
+        }),
+        IDENTIFIER(new Checker() {
+                @Override
+                public boolean check(String string) {
+                        return !string.equals("const") && !string.equals("let");
+                }
+        });
 
-        TokenType(String text){
-                rep = text;
+        private final Checker checker;
+
+        TokenType(Checker checker){
+                this.checker = checker;
         }
 
-        public String getRep() {
-                return rep;
+        public Checker getChecker() {
+                return checker;
         }
-//        PLUS,
+
+        public abstract static class Checker{
+
+                public abstract boolean check(String string);
+
+        }
+
 //        MULTIPLY,
 //        DIVIDE,
 //        GREATER_EQUAL,
 //        GREATER,
 //        LESS_EQUAL,
 //        LESS,
-//        IDENTIFIER,
 //        STRING,
 //        NUMBER,
 //        BOOLEAN,
 //        PRINT,
 //        LET,
-//        CONST,
 //        IF,
 //        ELSE,
 //        NUMBER_TYPE,
