@@ -1,10 +1,11 @@
 package lexer.model;
+import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Builder;
 import lombok.Data;
 
-@Data
-@Builder
+import java.util.Objects;
 
+@Builder
 public class Position {
     private final int rowStart;
     private final int rowEnd;
@@ -50,6 +51,19 @@ public class Position {
                 .columnStart(columnStart)
                 .columnEnd(columnEnd + 1)
                 .build();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Position position = (Position) o;
+        return rowStart == position.rowStart && rowEnd == position.rowEnd && columnStart == position.columnStart && columnEnd == position.columnEnd;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rowStart, rowEnd, columnStart, columnEnd);
     }
 }
 
