@@ -5,9 +5,9 @@ public enum TokenType {
         PLUS,
         MULTIPLY,
         DIVIDE,
-        GREATER_EQUAL,
+        GEQ,
         GREATER,
-        LESS_EQUAL,
+        LEQ,
         LESS,
         IDENTIFIER,
         STRING,
@@ -28,5 +28,5 @@ public enum TokenType {
         RIGHT_PAREN,
         LEFT_CURLY_BRACES,
         RIGHT_CURLY_BRACES,
-        EOF,
+        EOF
     }
