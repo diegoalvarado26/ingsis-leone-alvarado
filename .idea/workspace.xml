@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="commited with the changes made with Mati's help">
       <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +112,7 @@
       <recent name="lexer" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LexerTest.test06">
+  <component name="RunManager" selected="Gradle.LexerTest.test10">
     <configuration name="LexerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,7 +136,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test03" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test07" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -146,7 +149,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test03&quot;" />
+            <option value="&quot;lexer.LexerTest.test07&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,7 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test04" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test08" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +172,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test04&quot;" />
+            <option value="&quot;lexer.LexerTest.test08&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,7 +182,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test05" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test09" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -192,7 +195,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test05&quot;" />
+            <option value="&quot;lexer.LexerTest.test09&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,7 +205,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test06" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,7 +218,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test06&quot;" />
+            <option value="&quot;lexer.LexerTest.test10&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LexerTest.test06" />
+        <item itemvalue="Gradle.LexerTest.test10" />
+        <item itemvalue="Gradle.LexerTest.test09" />
+        <item itemvalue="Gradle.LexerTest.test08" />
         <item itemvalue="Gradle.LexerTest" />
-        <item itemvalue="Gradle.LexerTest.test05" />
-        <item itemvalue="Gradle.LexerTest.test04" />
-        <item itemvalue="Gradle.LexerTest.test03" />
+        <item itemvalue="Gradle.LexerTest.test07" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +258,10 @@
       <workItem from="1649115950785" duration="47000" />
       <workItem from="1649116015222" duration="3918000" />
       <workItem from="1649182732890" duration="2482000" />
-      <workItem from="1649185237022" duration="5822000" />
+      <workItem from="1649185237022" duration="8528000" />
+      <workItem from="1649265565377" duration="7527000" />
+      <workItem from="1649282315956" duration="597000" />
+      <workItem from="1649346659554" duration="8063000" />
     </task>
     <task id="LOCAL-00001" summary="first commit with java">
       <created>1649115347164</created>
@@ -285,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649191960452</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commited with the changes made with Mati's help">
+      <created>1649193050186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649193050186</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +319,117 @@
     <MESSAGE value="first commit with java" />
     <MESSAGE value="commited with the changes made with Mati's help" />
     <option name="LAST_COMMIT_MESSAGE" value="commited with the changes made with Mati's help" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="lexer.model.Token" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -78,4 +78,57 @@ public class LexerTest {
 
         assertArrayEquals(output.toArray(), result.toArray());
     }
+    @Test
+    public void test07(){
+        String input = "aa";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.IDENTIFIER, "aa", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+
+    @Test
+    public void test08(){
+        String input = "100";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "100", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+
+    @Test
+    public void test09(){
+        String input = "100.0";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "100.0", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test10(){
+        String input = "100.100";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "100.100", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+//    @Test
+//    public void test11(){
+//        String input = "\"Hello World\"";
+//        List<Token> output = new ArrayList<>();
+//        output.add(new Token(TokenType.IDENTIFIER, "aa", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+//
+//        List<Token> result = new Lexer().lex(input);
+//
+//        assertArrayEquals(output.toArray(), result.toArray());
+//    }
+
 }
