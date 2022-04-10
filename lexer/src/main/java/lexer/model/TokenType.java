@@ -40,7 +40,7 @@ public enum TokenType {
                 @Override
                 public boolean check(String string) {
                         String regex = "([0-9]+)";
-                        String regexWithDots = "([0-9]+.[0.9])";
+                        String regexWithDots = "([0-9]+.[0-9]+)";
                         Pattern p = Pattern.compile(regex);
                         Pattern dots = Pattern.compile(regexWithDots);
                         if (string == null) return false;
@@ -50,6 +50,19 @@ public enum TokenType {
 
 
                         return string.length()<20 && (matcher.matches() || withDots.matches() )&& !string.equals("const") && !string.equals("let");
+                }
+        }),
+        STRING(new Checker() {
+                @Override
+                public boolean check(String string) {
+                        String regex = "\"([^\"]+)\"";
+                        Pattern p = Pattern.compile(regex);
+                        if (string == null) return false;
+
+                        Matcher matcher = p.matcher(string);
+
+
+                        return matcher.matches() && !string.equals("const") && !string.equals("let");
                 }
         });
 
@@ -75,7 +88,6 @@ public enum TokenType {
 //        LESS_EQUAL,
 //        LESS,
 //        STRING,
-//        NUMBER,
 //        BOOLEAN,
 //        PRINT,
 //        LET,

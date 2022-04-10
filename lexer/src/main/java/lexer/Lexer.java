@@ -48,7 +48,7 @@ public class Lexer {
     private boolean isValidWithNextChar(String currentChar, String firstChar, String secondChar){
         String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]*)$";
         String numberRegex = "([0-9]+)$";
-        String numberWithDots = "([0-9]+.[0.9]+)";
+        String numberWithDots = "([0-9]+.[0-9]+)$";
         Pattern p = Pattern.compile(regex);
         Pattern numberPattern = Pattern.compile(numberRegex);
         Pattern numberWithDotsPattern = Pattern.compile(numberWithDots);

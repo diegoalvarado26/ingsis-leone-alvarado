@@ -120,15 +120,15 @@ public class LexerTest {
 
         assertArrayEquals(output.toArray(), result.toArray());
     }
-//    @Test
-//    public void test11(){
-//        String input = "\"Hello World\"";
-//        List<Token> output = new ArrayList<>();
-//        output.add(new Token(TokenType.IDENTIFIER, "aa", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
-//
-//        List<Token> result = new Lexer().lex(input);
-//
-//        assertArrayEquals(output.toArray(), result.toArray());
-//    }
+    @Test
+    public void test11(){
+        String input = "\"Hello World\"";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.STRING, "\"Hello World\"", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
 
 }
