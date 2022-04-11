@@ -3,7 +3,7 @@ package lexer;
 import lexer.model.Position;
 import lexer.model.Token;
 import lexer.model.TokenType;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -130,5 +130,160 @@ public class LexerTest {
 
         assertArrayEquals(output.toArray(), result.toArray());
     }
+    @Test
+    public void test12(){
+        String input = "*";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.MULTIPLY, "*", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
 
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test13(){
+        String input = "1*1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.MULTIPLY, "*", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test14(){
+        String input = "1 * 1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.MULTIPLY, "*", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test15(){
+        String input = " ";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test16(){
+        String input = "1>1 >= 1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.GREATER, ">", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.GREATER_EQUAL, ">=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test17(){
+        String input = "1=1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.EQUAL, "=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test18(){
+        String input = "1<1 <= 1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.LESS, "<", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.LESS_EQUAL, "<=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test19(){
+        String input = "let variable = 1;";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.LET, "let", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.IDENTIFIER, "variable", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.EQUAL, "=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.SEMICOLON, ";", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test20(){
+        String input = "const variable = 1;";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.CONST, "const", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.IDENTIFIER, "variable", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.EQUAL, "=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.SEMICOLON, ";", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test21(){
+        String input = "print(1);";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.PRINT, "print", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.LEFT_PAREN, "(", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.RIGHT_PAREN, ")", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.SEMICOLON, ";", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
+    @Test
+    public void test22(){
+        String input = "if(1=1) else 1";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.IF, "if", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.LEFT_PAREN, "(", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.EQUAL, "=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.RIGHT_PAREN, ")", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.ELSE, "else", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
 }

@@ -48,16 +48,19 @@ public class Lexer {
     private boolean isValidWithNextChar(String currentChar, String firstChar, String secondChar){
         String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]*)$";
         String numberRegex = "([0-9]+)$";
-        String numberWithDots = "([0-9]+.[0-9]+)$";
+        String numberWithDots = "([0-9]+[.][0-9]+)$";
+        String greaterRegex = "[><][=]$";
+
         Pattern p = Pattern.compile(regex);
         Pattern numberPattern = Pattern.compile(numberRegex);
         Pattern numberWithDotsPattern = Pattern.compile(numberWithDots);
+        Pattern greaterPattern = Pattern.compile(greaterRegex);
 
         String currentFirst = currentChar + firstChar;
         String currentFirstSecond= currentFirst + secondChar;
 
-        boolean firstMatch = firstChar!=null && (p.matcher(currentFirst).matches() || (numberPattern.matcher(currentFirst).matches() || numberWithDotsPattern.matcher(currentFirst).matches()));
-        boolean secondMatch = secondChar != null && (p.matcher(currentFirstSecond).matches() || (numberPattern.matcher(currentFirstSecond).matches() || numberWithDotsPattern.matcher(currentFirstSecond).matches()));
+        boolean firstMatch = firstChar!=null && (p.matcher(currentFirst).matches() || greaterPattern.matcher(currentFirst).matches() || (numberPattern.matcher(currentFirst).matches() || numberWithDotsPattern.matcher(currentFirst).matches()));
+        boolean secondMatch = secondChar != null && (p.matcher(currentFirstSecond).matches() || greaterPattern.matcher(currentFirstSecond).matches() || (numberPattern.matcher(currentFirstSecond).matches() || numberWithDotsPattern.matcher(currentFirstSecond).matches()));
 
         return firstMatch || secondMatch;
 
