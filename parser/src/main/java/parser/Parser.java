@@ -1,4 +1,11 @@
 package parser;
+import lexer.Lexer;
+import parser.ast.AbstractSyntaxTree;
+import java.util.List;
 
-public class Parser {
-}
+public interface Parser {
+    List<AbstractSyntaxTree> parse(Lexer lexer) throws Exception;
+
+
+    }
+
