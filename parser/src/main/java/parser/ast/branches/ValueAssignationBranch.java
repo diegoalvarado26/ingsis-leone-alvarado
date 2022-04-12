@@ -19,17 +19,17 @@ public class ValueAssignationBranch extends AbstractSyntaxBranch {
     }
 
     @Override
-    public AbstractSyntaxTree addValueAssignation(AbstractSyntaxTree tree) {
-        return null;
+    public AbstractSyntaxTree addValueAssignation(ValueAssignationBranch branch) {
+        return branch;
     }
 
     @Override
-    public AbstractSyntaxTree addTypeAssignation(AbstractSyntaxTree tree) {
-        return null;
+    public boolean isEmpty() {
+        return false;
     }
 
     @Override
-    public void acccept(ASTVisitor visitor) {
+    public void accept(ASTVisitor visitor) {
 
     }
 }
