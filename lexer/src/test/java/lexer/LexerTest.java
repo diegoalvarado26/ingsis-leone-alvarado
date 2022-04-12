@@ -286,4 +286,21 @@ public class LexerTest {
 
         assertArrayEquals(output.toArray(), result.toArray());
     }
+    @Test
+    public void test23(){
+        String input = "const  constante = 1;";
+        List<Token> output = new ArrayList<>();
+        output.add(new Token(TokenType.CONST, "const", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.IDENTIFIER, "constante", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.EQUAL, "=", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.WHITESPACE, " ", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.NUMBER, "1", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        output.add(new Token(TokenType.SEMICOLON, ";", Position.builder().rowEnd(0).rowStart(0).columnEnd(0).columnStart(0).build()));
+        List<Token> result = new Lexer().lex(input);
+
+        assertArrayEquals(output.toArray(), result.toArray());
+    }
 }

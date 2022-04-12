@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "ingsis-leone-alvarado"
-include("lib", "lexer", "parser")
+include("lib", "lexer", "parser", "cli")
