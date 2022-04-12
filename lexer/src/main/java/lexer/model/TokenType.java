@@ -1,8 +1,5 @@
 package lexer.model;
 
-
-import org.checkerframework.checker.units.qual.C;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

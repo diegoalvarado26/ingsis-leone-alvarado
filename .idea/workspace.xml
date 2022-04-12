@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="finished the lexer, i only need to add all the tokenTypes">
+    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="finished the lexer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/main/java/lexer/model/TokenType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ingsis-leone-alvarado" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -111,8 +116,8 @@
       <recent name="lexer" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LexerTest.test22">
-    <configuration name="LexerTest.test18" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.LexerTest (1)">
+    <configuration name="LexerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +130,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test18&quot;" />
+            <option value="&quot;lexer.LexerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LexerTest (1)" />
         <item itemvalue="Gradle.LexerTest.test22" />
         <item itemvalue="Gradle.LexerTest.test21" />
         <item itemvalue="Gradle.LexerTest.test20" />
         <item itemvalue="Gradle.LexerTest.test19" />
-        <item itemvalue="Gradle.LexerTest.test18" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +265,8 @@
       <workItem from="1649185237022" duration="8528000" />
       <workItem from="1649265565377" duration="7527000" />
       <workItem from="1649282315956" duration="597000" />
-      <workItem from="1649346659554" duration="16889000" />
+      <workItem from="1649346659554" duration="18692000" />
+      <workItem from="1649691055906" duration="7110000" />
     </task>
     <task id="LOCAL-00001" summary="first commit with java">
       <created>1649115347164</created>
@@ -311,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649631424051</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finished the lexer">
+      <created>1649641183428</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649641183428</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,133 +346,10 @@
     <MESSAGE value="commited with the changes made with Mati's help" />
     <MESSAGE value="changed the lexer and token type" />
     <MESSAGE value="finished the lexer, i only need to add all the tokenTypes" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished the lexer, i only need to add all the tokenTypes" />
+    <MESSAGE value="finished the lexer" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished the lexer" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/main/java/lexer/Lexer.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>190</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>192</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>220</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java</url>
-          <line>218</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="lexer.model.Token" memberName="value" />

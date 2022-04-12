@@ -1,7 +1,5 @@
 package lexer.model;
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Builder;
-import lombok.Data;
 
 import java.util.Objects;
 
