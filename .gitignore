@@ -7,4 +7,3 @@ build
 gradle.properties
 .idea/
 .gitattributes
-.idea/workspace.xml
