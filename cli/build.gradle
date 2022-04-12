@@ -1,0 +1,33 @@
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'application'
+    id 'test.java-common-conventions'
+
+    // Maneja el tema de getters y setters y builders, una maravilla
+    id 'io.freefair.lombok' version '6.4.1'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/austral-ingsis/printscript-parser-common")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+            // username = "diego"
+            password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation'org.projectlombok:lombok:1.18.20'
+
+    // IngSis
+    implementation'org.austral.ingsis.printscript:printscript-parser-common:0.1.0'
+
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation'com.google.guava:guava:30.1.1-jre'
+    implementation'org.junit.jupiter:junit-jupiter:5.8.1'
+}
