@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'checkstyle'
+    id 'jacoco'
 }
 
 repositories {
@@ -22,5 +23,3 @@ checkstyleMain {
 checkstyleTest {
     source = 'src/test/java'
 }
-
-test.finalizedBy(format)

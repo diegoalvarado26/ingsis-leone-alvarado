@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="finished the lexer">
+    <list default="true" id="383ec7ce-0a44-4114-b198-509a76bad4f4" name="Changes" comment="changed the build.gradle languages and started implementing sprotless formatter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/src/test/java/lexer/LexerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/test.java-common-conventions.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/test.java-common-conventions.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cli/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/src/main/java/cli/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/cli/src/main/java/cli/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/src/test/java/cli/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cli/src/test/java/cli/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lexer/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lexer/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser/src/main/java/parser/ast/branches/AbstractSyntaxBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/parser/src/main/java/parser/ast/branches/AbstractSyntaxBranch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="numa" />
+        <entry key="$PROJECT_DIR$" value="numa-java" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,10 +117,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/parser" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/buildSrc/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/CLI/src/main" />
@@ -129,30 +134,7 @@
       <recent name="lexer" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LexerTest.test23">
-    <configuration name="AppTest.appHasAGreeting" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cli:test" />
-            <option value="--tests" />
-            <option value="&quot;cli.AppTest.appHasAGreeting&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.LexerTest (1)">
     <configuration name="LexerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,7 +158,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test21" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test01 (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -189,7 +171,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test21&quot;" />
+            <option value="&quot;lexer.LexerTest.test01&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,7 +181,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test22" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LexerTest.test24" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -212,7 +194,7 @@
           <list>
             <option value=":lexer:test" />
             <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test22&quot;" />
+            <option value="&quot;lexer.LexerTest.test24&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -222,36 +204,55 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.test23" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ingsis-leone-alvarado [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lexer:test" />
-            <option value="--tests" />
-            <option value="&quot;lexer.LexerTest.test23&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ingsis-leone-alvarado [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LexerTest.test23" />
-        <item itemvalue="Gradle.AppTest.appHasAGreeting" />
         <item itemvalue="Gradle.LexerTest (1)" />
-        <item itemvalue="Gradle.LexerTest.test22" />
-        <item itemvalue="Gradle.LexerTest.test21" />
+        <item itemvalue="Gradle.ingsis-leone-alvarado [test]" />
+        <item itemvalue="Gradle.LexerTest.test01 (1)" />
+        <item itemvalue="Gradle.LexerTest.test24" />
+        <item itemvalue="Gradle.ingsis-leone-alvarado [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -281,6 +282,15 @@
       <workItem from="1649346659554" duration="18692000" />
       <workItem from="1649691055906" duration="7110000" />
       <workItem from="1649780608839" duration="10969000" />
+      <workItem from="1649883945901" duration="745000" />
+      <workItem from="1650395543792" duration="5747000" />
+      <workItem from="1650467295852" duration="123000" />
+      <workItem from="1650577792789" duration="619000" />
+      <workItem from="1650578429040" duration="201000" />
+      <workItem from="1650578739249" duration="214000" />
+      <workItem from="1650578966698" duration="5266000" />
+      <workItem from="1650901447925" duration="1197000" />
+      <workItem from="1650988372897" duration="174000" />
     </task>
     <task id="LOCAL-00001" summary="first commit with java">
       <created>1649115347164</created>
@@ -379,7 +389,8 @@
     <MESSAGE value="changed the lexer and token type" />
     <MESSAGE value="finished the lexer, i only need to add all the tokenTypes" />
     <MESSAGE value="finished the lexer" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished the lexer" />
+    <MESSAGE value="changed the build.gradle languages and started implementing sprotless formatter" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the build.gradle languages and started implementing sprotless formatter" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

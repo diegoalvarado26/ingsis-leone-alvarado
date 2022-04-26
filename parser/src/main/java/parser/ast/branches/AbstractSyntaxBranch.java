@@ -6,14 +6,15 @@ import org.austral.ingsis.printscript.common.Token;
 import parser.ast.AbstractSyntaxTree;
 import parser.ast.leaves.VoidSyntaxLeaf;
 
-@Builder
 @Getter
 
 public abstract class AbstractSyntaxBranch implements AbstractSyntaxTree {
    // En principio tendríamos una para cada tipo (e.g. println, suma, etc)
     Token token;
-    AbstractSyntaxTree left = new VoidSyntaxLeaf();
-    AbstractSyntaxTree right = new VoidSyntaxLeaf();
+
+    private AbstractSyntaxTree left = new VoidSyntaxLeaf();
+
+    private AbstractSyntaxTree right = new VoidSyntaxLeaf();
 
     @Override
     public boolean isEmpty(){
